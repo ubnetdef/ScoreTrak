@@ -1,4 +1,4 @@
-module github.com/ScoreTrak/ScoreTrak
+module github.com/UBNetDef/ScoreTrak
 
 go 1.19
 
