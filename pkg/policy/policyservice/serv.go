@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/policy"
-	repo2 "github.com/ScoreTrak/ScoreTrak/pkg/policy/policyrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/policy"
+	repo2 "github.com/ubnetdef/ScoreTrak/pkg/policy/policyrepo"
 )
 
 type Serv interface {

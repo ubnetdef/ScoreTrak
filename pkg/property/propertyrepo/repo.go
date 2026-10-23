@@ -3,7 +3,7 @@ package propertyrepo
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/property"
+	"github.com/ubnetdef/ScoreTrak/pkg/property"
 	"github.com/gofrs/uuid"
 )
 

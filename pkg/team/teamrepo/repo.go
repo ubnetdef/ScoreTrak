@@ -3,7 +3,7 @@ package teamrepo
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/team"
+	"github.com/ubnetdef/ScoreTrak/pkg/team"
 	"github.com/gofrs/uuid"
 )
 

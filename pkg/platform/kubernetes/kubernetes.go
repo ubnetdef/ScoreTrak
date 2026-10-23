@@ -6,9 +6,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/config"
-	"github.com/ScoreTrak/ScoreTrak/pkg/platform/util"
-	"github.com/ScoreTrak/ScoreTrak/pkg/platform/worker"
+	"github.com/ubnetdef/ScoreTrak/pkg/config"
+	"github.com/ubnetdef/ScoreTrak/pkg/platform/util"
+	"github.com/ubnetdef/ScoreTrak/pkg/platform/worker"
 	appv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

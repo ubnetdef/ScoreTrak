@@ -1,22 +1,22 @@
 package handler
 
 import (
-	"buf.build/gen/go/scoretrak/scoretrakapis/grpc/go/scoretrak/round/v2/roundv2grpc"
-	roundv2 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/round/v2"
 	"context"
+
+	roundv2 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/round/v2"
 
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/round"
-	"github.com/ScoreTrak/ScoreTrak/pkg/round/roundservice"
 	"github.com/golang/protobuf/ptypes/timestamp"
+	"github.com/ubnetdef/ScoreTrak/pkg/round"
+	"github.com/ubnetdef/ScoreTrak/pkg/round/roundservice"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
 
 type RoundV2Controller struct {
 	svc roundservice.Serv
-	roundv2grpc.UnimplementedRoundServiceServer
+	roundv2.UnimplementedRoundServiceServer
 }
 
 func (r RoundV2Controller) GetLastNonElapsingRound(ctx context.Context, _ *roundv2.RoundServiceGetLastNonElapsingRoundRequest) (*roundv2.RoundServiceGetLastNonElapsingRoundResponse, error) {

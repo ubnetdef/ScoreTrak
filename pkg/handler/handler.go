@@ -1,19 +1,20 @@
 package handler
 
 import (
-	protov1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/proto/v1"
 	"context"
 	"errors"
 	"fmt"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/auth"
-	"github.com/ScoreTrak/ScoreTrak/pkg/check"
-	"github.com/ScoreTrak/ScoreTrak/pkg/host"
-	"github.com/ScoreTrak/ScoreTrak/pkg/property"
-	"github.com/ScoreTrak/ScoreTrak/pkg/service"
-	"github.com/ScoreTrak/ScoreTrak/pkg/storage/orm"
-	"github.com/ScoreTrak/ScoreTrak/pkg/storage/util"
+	protov1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/proto/v1"
+
 	"github.com/gofrs/uuid"
+	"github.com/ubnetdef/ScoreTrak/pkg/auth"
+	"github.com/ubnetdef/ScoreTrak/pkg/check"
+	"github.com/ubnetdef/ScoreTrak/pkg/host"
+	"github.com/ubnetdef/ScoreTrak/pkg/property"
+	"github.com/ubnetdef/ScoreTrak/pkg/service"
+	"github.com/ubnetdef/ScoreTrak/pkg/storage/orm"
+	"github.com/ubnetdef/ScoreTrak/pkg/storage/util"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"gorm.io/gorm"

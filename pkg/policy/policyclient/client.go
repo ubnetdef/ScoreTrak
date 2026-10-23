@@ -7,10 +7,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/policy"
-	"github.com/ScoreTrak/ScoreTrak/pkg/policy/policyrepo"
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue"
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue/queueing"
+	"github.com/ubnetdef/ScoreTrak/pkg/policy"
+	"github.com/ubnetdef/ScoreTrak/pkg/policy/policyrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue/queueing"
 	"github.com/gofrs/uuid"
 	"github.com/jinzhu/copier"
 )

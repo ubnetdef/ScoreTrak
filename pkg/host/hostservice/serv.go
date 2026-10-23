@@ -3,8 +3,8 @@ package hostservice
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/host"
-	repo2 "github.com/ScoreTrak/ScoreTrak/pkg/host/hostrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/host"
+	repo2 "github.com/ubnetdef/ScoreTrak/pkg/host/hostrepo"
 	"github.com/gofrs/uuid"
 )
 

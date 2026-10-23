@@ -1,7 +1,7 @@
 package telemetry
 
 import (
-	"github.com/ScoreTrak/ScoreTrak/pkg/config"
+	"github.com/ubnetdef/ScoreTrak/pkg/config"
 	"go.uber.org/zap"
 )
 

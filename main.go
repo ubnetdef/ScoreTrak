@@ -1,6 +1,6 @@
 package main
 
-import "github.com/ScoreTrak/ScoreTrak/cmd"
+import "github.com/ubnetdef/ScoreTrak/cmd"
 
 func main() {
 	cmd.Execute()

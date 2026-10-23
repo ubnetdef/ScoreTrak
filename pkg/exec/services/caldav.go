@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/exec"
+	"github.com/ubnetdef/ScoreTrak/pkg/exec"
 	"github.com/emersion/go-webdav"
 )
 

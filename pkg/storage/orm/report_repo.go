@@ -3,11 +3,11 @@ package orm
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/check"
-	"github.com/ScoreTrak/ScoreTrak/pkg/report/reportrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/check"
+	"github.com/ubnetdef/ScoreTrak/pkg/report/reportrepo"
 	"github.com/gofrs/uuid"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/report"
+	"github.com/ubnetdef/ScoreTrak/pkg/report"
 	"gorm.io/gorm"
 )
 

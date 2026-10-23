@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/exec"
+	"github.com/ubnetdef/ScoreTrak/pkg/exec"
 	"golang.org/x/crypto/ssh"
 )
 

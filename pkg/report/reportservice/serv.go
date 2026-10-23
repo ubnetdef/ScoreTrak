@@ -3,8 +3,8 @@ package reportservice
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/report"
-	repo2 "github.com/ScoreTrak/ScoreTrak/pkg/report/reportrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/report"
+	repo2 "github.com/ubnetdef/ScoreTrak/pkg/report/reportrepo"
 )
 
 type Serv interface {

@@ -1,9 +1,9 @@
 package util
 
 import (
-	"github.com/ScoreTrak/ScoreTrak/pkg/config"
-	"github.com/ScoreTrak/ScoreTrak/pkg/platform/worker"
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue/queueing"
+	"github.com/ubnetdef/ScoreTrak/pkg/config"
+	"github.com/ubnetdef/ScoreTrak/pkg/platform/worker"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue/queueing"
 	"reflect"
 	"testing"
 )

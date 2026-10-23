@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/exec"
+	"github.com/ubnetdef/ScoreTrak/pkg/exec"
 )
 
 type HTTP struct {

@@ -3,8 +3,8 @@ package roundservice
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/round"
-	repo2 "github.com/ScoreTrak/ScoreTrak/pkg/round/roundrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/round"
+	repo2 "github.com/ubnetdef/ScoreTrak/pkg/round/roundrepo"
 )
 
 type Serv interface {

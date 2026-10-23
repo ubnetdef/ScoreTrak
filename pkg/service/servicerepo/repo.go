@@ -3,7 +3,7 @@ package servicerepo
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/service"
+	"github.com/ubnetdef/ScoreTrak/pkg/service"
 	"github.com/gofrs/uuid"
 )
 

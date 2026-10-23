@@ -1,16 +1,16 @@
 package handler
 
 import (
-	"buf.build/gen/go/scoretrak/scoretrakapis/grpc/go/scoretrak/user/v2/userv2grpc"
-	protov1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/proto/v1"
-	userv2 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/user/v2"
 	"context"
 	"fmt"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/policy/policyclient"
-	"github.com/ScoreTrak/ScoreTrak/pkg/user"
-	"github.com/ScoreTrak/ScoreTrak/pkg/user/userservice"
+	protov1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/proto/v1"
+	userv2 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/user/v2"
+
 	"github.com/gofrs/uuid"
+	"github.com/ubnetdef/ScoreTrak/pkg/policy/policyclient"
+	"github.com/ubnetdef/ScoreTrak/pkg/user"
+	"github.com/ubnetdef/ScoreTrak/pkg/user/userservice"
 	"golang.org/x/crypto/bcrypt"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -18,7 +18,7 @@ import (
 
 type UserV2Controller struct {
 	svc userservice.Serv
-	userv2grpc.UnimplementedUserServiceServer
+	userv2.UnimplementedUserServiceServer
 	policyClient *policyclient.Client
 }
 

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/user"
+	"github.com/ubnetdef/ScoreTrak/pkg/user"
 	"github.com/golang-jwt/jwt/v4"
 )
 

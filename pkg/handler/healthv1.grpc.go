@@ -1,13 +1,12 @@
 package handler
 
 import (
-	"buf.build/gen/go/scoretrak/scoretrakapis/grpc/go/grpc/health/v1/healthv1grpc"
-	healthv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/grpc/health/v1"
+	healthv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/grpc/health/v1"
 	"context"
 )
 
 type HealthV1Controller struct {
-	healthv1grpc.UnimplementedHealthServer
+	healthv1.UnimplementedHealthServer
 }
 
 func NewHealthV1Controller() *HealthV1Controller {

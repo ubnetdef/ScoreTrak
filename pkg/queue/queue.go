@@ -3,10 +3,10 @@ package queue
 import (
 	"errors"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue/none"
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue/nsq"
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue/queueing"
-	"github.com/ScoreTrak/ScoreTrak/pkg/servicegroup"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue/none"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue/nsq"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue/queueing"
+	"github.com/ubnetdef/ScoreTrak/pkg/servicegroup"
 )
 
 // WorkerQueue is an interface that every queue plugin should implement

@@ -3,7 +3,7 @@ package reportrepo
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/report"
+	"github.com/ubnetdef/ScoreTrak/pkg/report"
 	"github.com/gofrs/uuid"
 )
 

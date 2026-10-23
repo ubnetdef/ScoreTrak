@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/ScoreTrak/ScoreTrak/pkg/auth"
-	"github.com/ScoreTrak/ScoreTrak/pkg/config"
-	"github.com/ScoreTrak/ScoreTrak/pkg/server"
+	"github.com/ubnetdef/ScoreTrak/pkg/auth"
+	"github.com/ubnetdef/ScoreTrak/pkg/config"
+	"github.com/ubnetdef/ScoreTrak/pkg/server"
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	grpc_zap "github.com/grpc-ecosystem/go-grpc-middleware/logging/zap"
 	grpc_recovery "github.com/grpc-ecosystem/go-grpc-middleware/recovery"
@@ -85,8 +85,7 @@ func NewGrpcServer(staticConfig config.StaticConfig, logger *zap.Logger, authInt
 
 	// Observability
 	{
-		unaryServerInterceptors = append(unaryServerInterceptors, otelgrpc.UnaryServerInterceptor())
-		streamServerInterceptors = append(streamServerInterceptors, otelgrpc.StreamServerInterceptor())
+		serverOptions = append(serverOptions, grpc.StatsHandler(otelgrpc.NewServerHandler()))
 	}
 
 	// Chaining

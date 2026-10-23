@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/hostgroup"
-	"github.com/ScoreTrak/ScoreTrak/pkg/hostgroup/hostgrouprepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/hostgroup"
+	"github.com/ubnetdef/ScoreTrak/pkg/hostgroup/hostgrouprepo"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/storage/orm/testutil"
+	"github.com/ubnetdef/ScoreTrak/pkg/storage/orm/testutil"
 	"github.com/gofrs/uuid"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"

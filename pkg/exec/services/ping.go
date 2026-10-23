@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/exec"
+	"github.com/ubnetdef/ScoreTrak/pkg/exec"
 	"github.com/digineo/go-ping"
 )
 

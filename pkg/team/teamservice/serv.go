@@ -3,8 +3,8 @@ package teamservice
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/team"
-	repo2 "github.com/ScoreTrak/ScoreTrak/pkg/team/teamrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/team"
+	repo2 "github.com/ubnetdef/ScoreTrak/pkg/team/teamrepo"
 	"github.com/gofrs/uuid"
 )
 

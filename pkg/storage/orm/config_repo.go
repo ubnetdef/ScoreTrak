@@ -3,8 +3,8 @@ package orm
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/config"
-	"github.com/ScoreTrak/ScoreTrak/pkg/config/configrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/config"
+	"github.com/ubnetdef/ScoreTrak/pkg/config/configrepo"
 	"gorm.io/gorm"
 )
 

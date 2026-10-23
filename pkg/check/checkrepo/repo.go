@@ -3,7 +3,7 @@ package checkrepo
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/check"
+	"github.com/ubnetdef/ScoreTrak/pkg/check"
 	"github.com/gofrs/uuid"
 )
 

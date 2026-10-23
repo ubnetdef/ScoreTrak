@@ -1,21 +1,21 @@
 package handler
 
 import (
-	"buf.build/gen/go/scoretrak/scoretrakapis/grpc/go/scoretrak/report/v1/reportv1grpc"
-	reportv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/report/v1"
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/ScoreTrak/ScoreTrak/pkg/policy"
+
+	"github.com/ubnetdef/ScoreTrak/pkg/policy"
+	reportv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/report/v1"
 
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/policy/policyclient"
-	"github.com/ScoreTrak/ScoreTrak/pkg/report"
-	"github.com/ScoreTrak/ScoreTrak/pkg/report/reportclient"
-	"github.com/ScoreTrak/ScoreTrak/pkg/report/reportservice"
-	"github.com/ScoreTrak/ScoreTrak/pkg/user"
 	"github.com/gofrs/uuid"
+	"github.com/ubnetdef/ScoreTrak/pkg/policy/policyclient"
+	"github.com/ubnetdef/ScoreTrak/pkg/report"
+	"github.com/ubnetdef/ScoreTrak/pkg/report/reportclient"
+	"github.com/ubnetdef/ScoreTrak/pkg/report/reportservice"
+	"github.com/ubnetdef/ScoreTrak/pkg/user"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
@@ -24,7 +24,7 @@ type ReportV1Controller struct {
 	svc          reportservice.Serv
 	reportClient *reportclient.Client
 	policyClient *policyclient.Client
-	reportv1grpc.UnimplementedReportServiceServer
+	reportv1.UnimplementedReportServiceServer
 }
 
 func removeDisabledAndHidden(simpleReport *report.SimpleReport) {
@@ -146,7 +146,7 @@ func (r *ReportV1Controller) GetUnary(ctx context.Context, _ *reportv1.GetUnaryR
 	return &reportv1.GetUnaryResponse{Report: frep}, nil
 }
 
-func (r *ReportV1Controller) Get(_ *reportv1.GetRequest, server reportv1grpc.ReportService_GetServer) error {
+func (r *ReportV1Controller) Get(_ *reportv1.GetRequest, server reportv1.ReportService_GetServer) error {
 	rol := user.Anonymous
 	tID := uuid.UUID{}
 	lr, err := r.svc.Get(server.Context())

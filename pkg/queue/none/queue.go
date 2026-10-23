@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue/queueing"
-	"github.com/ScoreTrak/ScoreTrak/pkg/servicegroup"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue/queueing"
+	"github.com/ubnetdef/ScoreTrak/pkg/servicegroup"
 )
 
 type None struct{}

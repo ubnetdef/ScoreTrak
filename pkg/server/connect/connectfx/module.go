@@ -1,8 +1,8 @@
 package connectfx
 
 // import (
-// 	"github.com/ScoreTrak/ScoreTrak/pkg/handler/handlerfx"
-// 	sconnect "github.com/ScoreTrak/ScoreTrak/pkg/server/connect"
+// 	"github.com/ubnetdef/ScoreTrak/pkg/handler/handlerfx"
+// 	sconnect "github.com/ubnetdef/ScoreTrak/pkg/server/connect"
 // 	"go.uber.org/fx"
 // )
 

@@ -1,20 +1,20 @@
 package handler
 
 import (
-	"buf.build/gen/go/scoretrak/scoretrakapis/grpc/go/scoretrak/report/v2/reportv2grpc"
-	reportv2 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/report/v2"
 	"context"
 	"encoding/json"
 	"fmt"
 
+	reportv2 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/report/v2"
+
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/policy/policyclient"
-	"github.com/ScoreTrak/ScoreTrak/pkg/report"
-	"github.com/ScoreTrak/ScoreTrak/pkg/report/reportclient"
-	"github.com/ScoreTrak/ScoreTrak/pkg/report/reportservice"
-	"github.com/ScoreTrak/ScoreTrak/pkg/user"
 	"github.com/gofrs/uuid"
+	"github.com/ubnetdef/ScoreTrak/pkg/policy/policyclient"
+	"github.com/ubnetdef/ScoreTrak/pkg/report"
+	"github.com/ubnetdef/ScoreTrak/pkg/report/reportclient"
+	"github.com/ubnetdef/ScoreTrak/pkg/report/reportservice"
+	"github.com/ubnetdef/ScoreTrak/pkg/user"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
@@ -23,7 +23,7 @@ type ReportV2Controller struct {
 	svc          reportservice.Serv
 	reportClient *reportclient.Client
 	policyClient *policyclient.Client
-	reportv2grpc.UnimplementedReportServiceServer
+	reportv2.UnimplementedReportServiceServer
 }
 
 func (r *ReportV2Controller) filterReport(rol string, tID uuid.UUID, lr *report.Report) (*reportv2.Report, error) {
@@ -75,7 +75,7 @@ func (r *ReportV2Controller) GetUnary(ctx context.Context, _ *reportv2.ReportSer
 	return &reportv2.ReportServiceGetUnaryResponse{Report: frep}, nil
 }
 
-func (r *ReportV2Controller) Get(_ *reportv2.ReportServiceGetRequest, server reportv2grpc.ReportService_GetServer) error {
+func (r *ReportV2Controller) Get(_ *reportv2.ReportServiceGetRequest, server reportv2.ReportService_GetServer) error {
 	rol := user.Anonymous
 	tID := uuid.UUID{}
 	lr, err := r.svc.Get(server.Context())

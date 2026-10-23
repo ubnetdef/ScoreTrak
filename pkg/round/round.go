@@ -3,7 +3,7 @@ package round
 import (
 	"time"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/check"
+	"github.com/ubnetdef/ScoreTrak/pkg/check"
 )
 
 // Round Model holds the information about all the rounds that have passed

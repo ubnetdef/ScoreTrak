@@ -3,7 +3,7 @@ package hostgrouprepo
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/hostgroup"
+	"github.com/ubnetdef/ScoreTrak/pkg/hostgroup"
 	"github.com/gofrs/uuid"
 )
 

@@ -1,23 +1,23 @@
 package handler
 
 import (
-	"buf.build/gen/go/scoretrak/scoretrakapis/grpc/go/scoretrak/team/v1/teamv1grpc"
-	protov1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/proto/v1"
-	teamv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/team/v1"
 	"context"
 	"fmt"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/team"
-	"github.com/ScoreTrak/ScoreTrak/pkg/team/teamservice"
+	protov1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/proto/v1"
+	teamv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/team/v1"
+
 	"github.com/gofrs/uuid"
 	"github.com/golang/protobuf/ptypes/wrappers"
+	"github.com/ubnetdef/ScoreTrak/pkg/team"
+	"github.com/ubnetdef/ScoreTrak/pkg/team/teamservice"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
 
 type TeamV1Controller struct {
 	svc teamservice.Serv
-	teamv1grpc.UnimplementedTeamServiceServer
+	teamv1.UnimplementedTeamServiceServer
 }
 
 func (p TeamV1Controller) GetByID(ctx context.Context, request *teamv1.GetByIDRequest) (*teamv1.GetByIDResponse, error) {

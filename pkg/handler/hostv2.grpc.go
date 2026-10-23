@@ -1,18 +1,18 @@
 package handler
 
 import (
-	"buf.build/gen/go/scoretrak/scoretrakapis/grpc/go/scoretrak/host/v2/hostv2grpc"
-	hostv2 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/host/v2"
-	protov1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/proto/v1"
 	"context"
 	"fmt"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/host"
-	"github.com/ScoreTrak/ScoreTrak/pkg/host/hostservice"
-	"github.com/ScoreTrak/ScoreTrak/pkg/storage/util"
-	"github.com/ScoreTrak/ScoreTrak/pkg/user"
+	hostv2 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/host/v2"
+	protov1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/proto/v1"
+
 	"github.com/gofrs/uuid"
 	"github.com/golang/protobuf/ptypes/wrappers"
+	"github.com/ubnetdef/ScoreTrak/pkg/host"
+	"github.com/ubnetdef/ScoreTrak/pkg/host/hostservice"
+	"github.com/ubnetdef/ScoreTrak/pkg/storage/util"
+	"github.com/ubnetdef/ScoreTrak/pkg/user"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
@@ -20,7 +20,7 @@ import (
 type HostV2Controller struct {
 	svc    hostservice.Serv
 	client *util.Store
-	hostv2grpc.UnimplementedHostServiceServer
+	hostv2.UnimplementedHostServiceServer
 }
 
 func (p HostV2Controller) GetByID(ctx context.Context, request *hostv2.HostServiceGetByIDRequest) (*hostv2.HostServiceGetByIDResponse, error) {

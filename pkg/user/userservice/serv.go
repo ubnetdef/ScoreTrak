@@ -3,8 +3,8 @@ package userservice
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/user"
-	repo2 "github.com/ScoreTrak/ScoreTrak/pkg/user/userrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/user"
+	repo2 "github.com/ubnetdef/ScoreTrak/pkg/user/userrepo"
 	"github.com/gofrs/uuid"
 )
 

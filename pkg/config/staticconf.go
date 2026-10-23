@@ -1,11 +1,11 @@
 package config
 
 import (
-	"github.com/ScoreTrak/ScoreTrak/pkg/auth"
-	"github.com/ScoreTrak/ScoreTrak/pkg/platform/platforming"
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue/queueing"
-	"github.com/ScoreTrak/ScoreTrak/pkg/server"
-	"github.com/ScoreTrak/ScoreTrak/pkg/storage"
+	"github.com/ubnetdef/ScoreTrak/pkg/auth"
+	"github.com/ubnetdef/ScoreTrak/pkg/platform/platforming"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue/queueing"
+	"github.com/ubnetdef/ScoreTrak/pkg/server"
+	"github.com/ubnetdef/ScoreTrak/pkg/storage"
 )
 
 // StaticConfig is a struct of settings that are set at the start of the application. It contains Configs from other packages defined under pkg/ directory.

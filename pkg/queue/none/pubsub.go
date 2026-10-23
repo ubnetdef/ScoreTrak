@@ -3,7 +3,7 @@ package none
 import (
 	"time"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue/queueing"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue/queueing"
 )
 
 type PubSub struct {

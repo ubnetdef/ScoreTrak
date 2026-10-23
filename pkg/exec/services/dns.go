@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/exec"
+	"github.com/ubnetdef/ScoreTrak/pkg/exec"
 	"github.com/bogdanovich/dns_resolver"
 )
 

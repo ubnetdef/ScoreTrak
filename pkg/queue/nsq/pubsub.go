@@ -3,7 +3,7 @@ package nsq
 import (
 	"log"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue/queueing"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue/queueing"
 	"github.com/nsqio/go-nsq"
 )
 

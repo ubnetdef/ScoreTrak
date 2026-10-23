@@ -3,8 +3,8 @@ package propertyservice
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/property"
-	repo2 "github.com/ScoreTrak/ScoreTrak/pkg/property/propertyrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/property"
+	repo2 "github.com/ubnetdef/ScoreTrak/pkg/property/propertyrepo"
 	"github.com/gofrs/uuid"
 )
 

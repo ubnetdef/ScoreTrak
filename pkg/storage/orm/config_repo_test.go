@@ -2,10 +2,10 @@ package orm
 
 import (
 	"context"
-	"github.com/ScoreTrak/ScoreTrak/pkg/config"
-	. "github.com/ScoreTrak/ScoreTrak/pkg/config/util"
-	"github.com/ScoreTrak/ScoreTrak/pkg/report"
-	. "github.com/ScoreTrak/ScoreTrak/pkg/storage/orm/testutil"
+	"github.com/ubnetdef/ScoreTrak/pkg/config"
+	. "github.com/ubnetdef/ScoreTrak/pkg/config/util"
+	"github.com/ubnetdef/ScoreTrak/pkg/report"
+	. "github.com/ubnetdef/ScoreTrak/pkg/storage/orm/testutil"
 
 	. "github.com/smartystreets/goconvey/convey"
 	"testing"

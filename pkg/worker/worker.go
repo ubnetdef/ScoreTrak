@@ -3,7 +3,7 @@ package worker
 import "C"
 import (
 	"context"
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue"
 	"go.uber.org/fx"
 	"log"
 )

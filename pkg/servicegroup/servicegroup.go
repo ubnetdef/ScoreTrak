@@ -4,7 +4,7 @@ import (
 	"errors"
 	"regexp"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/service"
+	"github.com/ubnetdef/ScoreTrak/pkg/service"
 	"github.com/gofrs/uuid"
 	"gorm.io/gorm"
 )

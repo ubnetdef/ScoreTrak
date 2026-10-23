@@ -6,8 +6,8 @@ package handler
 //	authv2 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/auth/v2"
 //	"context"
 //	"errors"
-//	"github.com/ScoreTrak/ScoreTrak/pkg/auth"
-//	"github.com/ScoreTrak/ScoreTrak/pkg/user/userservice"
+//	"github.com/ubnetdef/ScoreTrak/pkg/auth"
+//	"github.com/ubnetdef/ScoreTrak/pkg/user/userservice"
 //	"github.com/bufbuild/connect-go"
 //)
 //

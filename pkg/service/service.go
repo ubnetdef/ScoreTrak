@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/check"
-	"github.com/ScoreTrak/ScoreTrak/pkg/exec/resolver"
-	"github.com/ScoreTrak/ScoreTrak/pkg/property"
+	"github.com/ubnetdef/ScoreTrak/pkg/check"
+	"github.com/ubnetdef/ScoreTrak/pkg/exec/resolver"
+	"github.com/ubnetdef/ScoreTrak/pkg/property"
 	"github.com/gofrs/uuid"
 	"gorm.io/gorm"
 )

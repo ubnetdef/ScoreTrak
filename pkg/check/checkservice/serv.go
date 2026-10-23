@@ -3,8 +3,8 @@ package checkservice
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/check"
-	repo2 "github.com/ScoreTrak/ScoreTrak/pkg/check/checkrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/check"
+	repo2 "github.com/ubnetdef/ScoreTrak/pkg/check/checkrepo"
 	"github.com/gofrs/uuid"
 )
 

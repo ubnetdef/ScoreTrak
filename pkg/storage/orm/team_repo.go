@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/team/teamrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/team/teamrepo"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/team"
+	"github.com/ubnetdef/ScoreTrak/pkg/team"
 	"github.com/gofrs/uuid"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"

@@ -1,28 +1,28 @@
 package handler
 
 import (
-	"buf.build/gen/go/scoretrak/scoretrakapis/grpc/go/scoretrak/check/v1/checkv1grpc"
-	checkv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/check/v1"
-	protov1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/proto/v1"
 	"context"
 	"fmt"
-	"github.com/ScoreTrak/ScoreTrak/pkg/auth"
-	"github.com/ScoreTrak/ScoreTrak/pkg/check/checkservice"
-	. "github.com/ScoreTrak/ScoreTrak/pkg/config/util"
-	"github.com/ScoreTrak/ScoreTrak/pkg/storage/orm"
-	. "github.com/ScoreTrak/ScoreTrak/pkg/storage/orm/testutil"
-	"github.com/ScoreTrak/ScoreTrak/pkg/storage/util"
-	"github.com/ScoreTrak/ScoreTrak/pkg/user"
+	"log"
+	"net"
+	"testing"
+
 	"github.com/golang-jwt/jwt/v4"
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	. "github.com/smartystreets/goconvey/convey"
+	"github.com/ubnetdef/ScoreTrak/pkg/auth"
+	"github.com/ubnetdef/ScoreTrak/pkg/check/checkservice"
+	. "github.com/ubnetdef/ScoreTrak/pkg/config/util"
+	"github.com/ubnetdef/ScoreTrak/pkg/storage/orm"
+	. "github.com/ubnetdef/ScoreTrak/pkg/storage/orm/testutil"
+	"github.com/ubnetdef/ScoreTrak/pkg/storage/util"
+	"github.com/ubnetdef/ScoreTrak/pkg/user"
+	checkv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/check/v1"
+	protov1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/proto/v1"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"google.golang.org/grpc/test/bufconn"
-	"log"
-	"net"
-	"testing"
 )
 
 func TestCheckSpec(t *testing.T) {
@@ -104,7 +104,7 @@ func TestCheckSpec(t *testing.T) {
 				opts = append(opts, grpc_middleware.WithStreamServerChain(middlewareChainsStream...))
 
 				s := grpc.NewServer(opts...)
-				checkv1grpc.RegisterCheckServiceServer(s, NewCheckV1Controller(cs, &us))
+				checkv1.RegisterCheckServiceServer(s, NewCheckV1Controller(cs, &us))
 
 				go func() {
 					if err := s.Serve(lis); err != nil {
@@ -120,7 +120,7 @@ func TestCheckSpec(t *testing.T) {
 					t.Fatalf("Failed to dial bufnet: %v", err)
 				}
 				defer conn.Close()
-				client := checkv1grpc.NewCheckServiceClient(conn)
+				client := checkv1.NewCheckServiceClient(conn)
 
 				Convey("Then run GetAllByRoundID", func() {
 

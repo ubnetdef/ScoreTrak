@@ -3,7 +3,7 @@ package configrepo
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/config"
+	"github.com/ubnetdef/ScoreTrak/pkg/config"
 )
 
 type Repo interface {

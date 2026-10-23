@@ -1,9 +1,9 @@
 package cmd
 
 import (
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue"
-	"github.com/ScoreTrak/ScoreTrak/pkg/telemetry/telemetryfx"
-	"github.com/ScoreTrak/ScoreTrak/pkg/worker"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue"
+	"github.com/ubnetdef/ScoreTrak/pkg/telemetry/telemetryfx"
+	"github.com/ubnetdef/ScoreTrak/pkg/worker"
 	"github.com/spf13/cobra"
 	"go.uber.org/fx"
 )

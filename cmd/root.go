@@ -7,17 +7,17 @@ import (
 	"log"
 	"os"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/auth"
-	"github.com/ScoreTrak/ScoreTrak/pkg/platform/platforming"
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue/queueing"
-	"github.com/ScoreTrak/ScoreTrak/pkg/server"
-	"github.com/ScoreTrak/ScoreTrak/pkg/storage"
+	"github.com/ubnetdef/ScoreTrak/pkg/auth"
+	"github.com/ubnetdef/ScoreTrak/pkg/platform/platforming"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue/queueing"
+	"github.com/ubnetdef/ScoreTrak/pkg/server"
+	"github.com/ubnetdef/ScoreTrak/pkg/storage"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/config"
-	"github.com/ScoreTrak/ScoreTrak/pkg/version"
+	"github.com/ubnetdef/ScoreTrak/pkg/config"
+	"github.com/ubnetdef/ScoreTrak/pkg/version"
 )
 
 var cfgFile string

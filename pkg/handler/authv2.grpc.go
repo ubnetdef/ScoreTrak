@@ -1,11 +1,11 @@
 package handler
 
 import (
-	"buf.build/gen/go/scoretrak/scoretrakapis/grpc/go/scoretrak/auth/v2/authv2grpc"
-	authv2 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/auth/v2"
 	"context"
-	"github.com/ScoreTrak/ScoreTrak/pkg/auth"
-	"github.com/ScoreTrak/ScoreTrak/pkg/user/userservice"
+
+	"github.com/ubnetdef/ScoreTrak/pkg/auth"
+	"github.com/ubnetdef/ScoreTrak/pkg/user/userservice"
+	authv2 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/auth/v2"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
@@ -13,7 +13,7 @@ import (
 type AuthV2Controller struct {
 	svc        userservice.Serv
 	jwtManager *auth.Manager
-	authv2grpc.UnimplementedAuthServiceServer
+	authv2.UnimplementedAuthServiceServer
 }
 
 func NewAuthV2Controller(svc userservice.Serv, jwtManager *auth.Manager) *AuthV2Controller {

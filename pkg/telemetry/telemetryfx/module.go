@@ -1,7 +1,7 @@
 package telemetryfx
 
 import (
-	"github.com/ScoreTrak/ScoreTrak/pkg/telemetry"
+	"github.com/ubnetdef/ScoreTrak/pkg/telemetry"
 	"go.uber.org/fx"
 )
 

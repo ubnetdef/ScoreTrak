@@ -4,7 +4,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue/queueing"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue/queueing"
 	"github.com/nsqio/go-nsq"
 )
 

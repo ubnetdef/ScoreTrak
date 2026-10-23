@@ -6,9 +6,9 @@ import (
 	"log"
 	"sync"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue"
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue/queueing"
-	"github.com/ScoreTrak/ScoreTrak/pkg/report/reportrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue/queueing"
+	"github.com/ubnetdef/ScoreTrak/pkg/report/reportrepo"
 	"github.com/gofrs/uuid"
 )
 

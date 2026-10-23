@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/exec"
+	"github.com/ubnetdef/ScoreTrak/pkg/exec"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )

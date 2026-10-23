@@ -10,9 +10,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/config"
-	"github.com/ScoreTrak/ScoreTrak/pkg/platform/util"
-	"github.com/ScoreTrak/ScoreTrak/pkg/platform/worker"
+	"github.com/ubnetdef/ScoreTrak/pkg/config"
+	"github.com/ubnetdef/ScoreTrak/pkg/platform/util"
+	"github.com/ubnetdef/ScoreTrak/pkg/platform/worker"
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/api/types/network"
@@ -247,7 +247,7 @@ func (d *Docker) UploadConfigToContainer(ctx context.Context, resp container.Con
 		return err
 	}
 	dockerFileTarReader := bytes.NewReader(buf.Bytes())
-	err = d.Client.CopyToContainer(ctx, resp.ID, "/go/src/github.com/ScoreTrak/ScoreTrak", dockerFileTarReader, types.CopyToContainerOptions{AllowOverwriteDirWithFile: true})
+	err = d.Client.CopyToContainer(ctx, resp.ID, "/go/src/github.com/ubnetdef/ScoreTrak", dockerFileTarReader, types.CopyToContainerOptions{AllowOverwriteDirWithFile: true})
 	if err != nil {
 		return err
 	}

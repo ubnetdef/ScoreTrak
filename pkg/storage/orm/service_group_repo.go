@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/servicegroup/servicegrouprepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/servicegroup/servicegrouprepo"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/servicegroup"
+	"github.com/ubnetdef/ScoreTrak/pkg/servicegroup"
 	"github.com/gofrs/uuid"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"

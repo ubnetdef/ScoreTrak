@@ -11,8 +11,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/queue/queueing"
-	"github.com/ScoreTrak/ScoreTrak/pkg/servicegroup"
+	"github.com/ubnetdef/ScoreTrak/pkg/queue/queueing"
+	"github.com/ubnetdef/ScoreTrak/pkg/servicegroup"
 	"github.com/gofrs/uuid"
 	"github.com/nsqio/go-nsq"
 )

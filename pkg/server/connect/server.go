@@ -3,7 +3,7 @@ package connect
 import (
 	"context"
 	"fmt"
-	"github.com/ScoreTrak/ScoreTrak/pkg/server"
+	"github.com/ubnetdef/ScoreTrak/pkg/server"
 	"go.uber.org/fx"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"

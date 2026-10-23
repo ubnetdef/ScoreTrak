@@ -1,41 +1,41 @@
 package handler
 
 import (
-	"buf.build/gen/go/scoretrak/scoretrakapis/grpc/go/scoretrak/competition/v1/competitionv1grpc"
-	checkv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/check/v1"
-	competitionv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/competition/v1"
-	hostv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/host/v1"
-	host_groupv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/host_group/v1"
-	propertyv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/property/v1"
-	reportv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/report/v1"
-	roundv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/round/v1"
-	servicev1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/service/v1"
-	service_groupv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/service_group/v1"
-	teamv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/team/v1"
-	userv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/user/v1"
 	"context"
+
+	checkv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/check/v1"
+	competitionv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/competition/v1"
+	hostv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/host/v1"
+	host_groupv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/host_group/v1"
+	propertyv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/property/v1"
+	reportv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/report/v1"
+	roundv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/round/v1"
+	servicev1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/service/v1"
+	service_groupv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/service_group/v1"
+	teamv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/team/v1"
+	userv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/user/v1"
 
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/check"
-	"github.com/ScoreTrak/ScoreTrak/pkg/competition"
-	"github.com/ScoreTrak/ScoreTrak/pkg/competition/competitionservice"
-	"github.com/ScoreTrak/ScoreTrak/pkg/host"
-	"github.com/ScoreTrak/ScoreTrak/pkg/hostgroup"
-	"github.com/ScoreTrak/ScoreTrak/pkg/property"
-	"github.com/ScoreTrak/ScoreTrak/pkg/report"
-	"github.com/ScoreTrak/ScoreTrak/pkg/round"
-	service2 "github.com/ScoreTrak/ScoreTrak/pkg/service"
-	"github.com/ScoreTrak/ScoreTrak/pkg/servicegroup"
-	"github.com/ScoreTrak/ScoreTrak/pkg/team"
-	"github.com/ScoreTrak/ScoreTrak/pkg/user"
+	"github.com/ubnetdef/ScoreTrak/pkg/check"
+	"github.com/ubnetdef/ScoreTrak/pkg/competition"
+	"github.com/ubnetdef/ScoreTrak/pkg/competition/competitionservice"
+	"github.com/ubnetdef/ScoreTrak/pkg/host"
+	"github.com/ubnetdef/ScoreTrak/pkg/hostgroup"
+	"github.com/ubnetdef/ScoreTrak/pkg/property"
+	"github.com/ubnetdef/ScoreTrak/pkg/report"
+	"github.com/ubnetdef/ScoreTrak/pkg/round"
+	service2 "github.com/ubnetdef/ScoreTrak/pkg/service"
+	"github.com/ubnetdef/ScoreTrak/pkg/servicegroup"
+	"github.com/ubnetdef/ScoreTrak/pkg/team"
+	"github.com/ubnetdef/ScoreTrak/pkg/user"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
 
 type CompetitionV1Controller struct {
 	svc competitionservice.Serv
-	competitionv1grpc.UnimplementedCompetitionServiceServer
+	competitionv1.UnimplementedCompetitionServiceServer
 }
 
 func (c CompetitionV1Controller) LoadCompetition(ctx context.Context, request *competitionv1.LoadCompetitionRequest) (*competitionv1.LoadCompetitionResponse, error) {

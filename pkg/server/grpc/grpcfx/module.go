@@ -1,8 +1,8 @@
 package grpcfx
 
 import (
-	"github.com/ScoreTrak/ScoreTrak/pkg/handler/handlerfx"
-	sgrpc "github.com/ScoreTrak/ScoreTrak/pkg/server/grpc"
+	"github.com/ubnetdef/ScoreTrak/pkg/handler/handlerfx"
+	sgrpc "github.com/ubnetdef/ScoreTrak/pkg/server/grpc"
 	"go.uber.org/fx"
 	"google.golang.org/grpc"
 )

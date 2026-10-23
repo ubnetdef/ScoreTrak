@@ -3,8 +3,8 @@ package configservice
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/config"
-	repo2 "github.com/ScoreTrak/ScoreTrak/pkg/config/configrepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/config"
+	repo2 "github.com/ubnetdef/ScoreTrak/pkg/config/configrepo"
 )
 
 type Serv interface {

@@ -4,8 +4,8 @@ package handler
 //	"buf.build/gen/go/scoretrak/scoretrakapis/bufbuild/connect-go/scoretrak/auth/v1/authv1connect"
 //	"context"
 //	"errors"
-//	"github.com/ScoreTrak/ScoreTrak/pkg/auth"
-//	"github.com/ScoreTrak/ScoreTrak/pkg/user/userservice"
+//	"github.com/ubnetdef/ScoreTrak/pkg/auth"
+//	"github.com/ubnetdef/ScoreTrak/pkg/user/userservice"
 //	"github.com/bufbuild/connect-go"
 //	authv1 "buf.build/gen/go/scoretrak/scoretrakapis/grpc/go/scoretrak/auth/v1"
 //)

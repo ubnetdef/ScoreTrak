@@ -1,18 +1,18 @@
 package handler
 
 import (
-	"buf.build/gen/go/scoretrak/scoretrakapis/grpc/go/scoretrak/property/v2/propertyv2grpc"
-	propertyv2 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/property/v2"
-	protov1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/proto/v1"
 	"context"
 	"fmt"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/property"
-	"github.com/ScoreTrak/ScoreTrak/pkg/property/propertyservice"
-	"github.com/ScoreTrak/ScoreTrak/pkg/storage/util"
-	"github.com/ScoreTrak/ScoreTrak/pkg/user"
+	propertyv2 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/property/v2"
+	protov1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/proto/v1"
+
 	"github.com/gofrs/uuid"
 	"github.com/golang/protobuf/ptypes/wrappers"
+	"github.com/ubnetdef/ScoreTrak/pkg/property"
+	"github.com/ubnetdef/ScoreTrak/pkg/property/propertyservice"
+	"github.com/ubnetdef/ScoreTrak/pkg/storage/util"
+	"github.com/ubnetdef/ScoreTrak/pkg/user"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
@@ -20,7 +20,7 @@ import (
 type PropertyV2Controller struct {
 	svc    propertyservice.Serv
 	client *util.Store
-	propertyv2grpc.UnimplementedPropertyServiceServer
+	propertyv2.UnimplementedPropertyServiceServer
 }
 
 func (p PropertyV2Controller) GetAll(ctx context.Context, _ *propertyv2.PropertyServiceGetAllRequest) (*propertyv2.PropertyServiceGetAllResponse, error) {

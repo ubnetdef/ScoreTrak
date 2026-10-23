@@ -1,21 +1,21 @@
 FROM golang:1.19 as builder
 ARG IMAGE_TAG
-RUN mkdir -p /go/src/github.com/ScoreTrak/ScoreTrak
-WORKDIR /go/src/github.com/ScoreTrak/ScoreTrak
+RUN mkdir -p /go/src/github.com/ubnetdef/ScoreTrak
+WORKDIR /go/src/github.com/ubnetdef/ScoreTrak
 COPY pkg/ pkg/
 COPY cmd/ cmd/
 COPY main.go main.go
 COPY go.mod go.mod
 COPY go.sum go.sum
 RUN go mod download
-RUN go build -o scoretrak -ldflags "-X 'github.com/ScoreTrak/ScoreTrak/pkg/version.Version=${IMAGE_TAG}'"
+RUN go build -o scoretrak -ldflags "-X 'github.com/ubnetdef/ScoreTrak/pkg/version.Version=${IMAGE_TAG}'"
 RUN chmod +x scoretrak
 
 
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 COPY --from=builder \
-    /go/src/github.com/ScoreTrak/ScoreTrak/scoretrak \
+    /go/src/github.com/ubnetdef/ScoreTrak/scoretrak \
     /go/bin/scoretrak
 
 RUN apt-get update \

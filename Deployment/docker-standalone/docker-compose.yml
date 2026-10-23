@@ -10,7 +10,7 @@ services:
       - ../:/deployments
     depends_on:
       - db-init
-    command: ./master -config /deployments/docker-standalone/config.yml
+    command: master -config /deployments/docker-standalone/config.yml
 
   scoretrak-web:
     image: ghcr.io/scoretrak/client/scoretrak-client:v0.1.7

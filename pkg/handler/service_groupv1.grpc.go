@@ -1,23 +1,23 @@
 package handler
 
 import (
-	"buf.build/gen/go/scoretrak/scoretrakapis/grpc/go/scoretrak/service_group/v1/service_groupv1grpc"
-	protov1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/proto/v1"
-	service_groupv1 "buf.build/gen/go/scoretrak/scoretrakapis/protocolbuffers/go/scoretrak/service_group/v1"
 	"context"
 	"fmt"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/servicegroup"
-	"github.com/ScoreTrak/ScoreTrak/pkg/servicegroup/servicegroupservice"
+	protov1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/proto/v1"
+	service_groupv1 "github.com/ubnetdef/scoretrakapis/gen/proto/go/scoretrak/service_group/v1"
+
 	"github.com/gofrs/uuid"
 	"github.com/golang/protobuf/ptypes/wrappers"
+	"github.com/ubnetdef/ScoreTrak/pkg/servicegroup"
+	"github.com/ubnetdef/ScoreTrak/pkg/servicegroup/servicegroupservice"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
 
 type ServiceGroupV1Controller struct {
 	svc servicegroupservice.Serv
-	service_groupv1grpc.UnimplementedServiceGroupServiceServer
+	service_groupv1.UnimplementedServiceGroupServiceServer
 }
 
 func (p ServiceGroupV1Controller) Redeploy(ctx context.Context, request *service_groupv1.RedeployRequest) (*service_groupv1.RedeployResponse, error) {

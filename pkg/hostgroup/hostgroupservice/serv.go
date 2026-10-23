@@ -3,8 +3,8 @@ package hostgroupservice
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/hostgroup"
-	repo2 "github.com/ScoreTrak/ScoreTrak/pkg/hostgroup/hostgrouprepo"
+	"github.com/ubnetdef/ScoreTrak/pkg/hostgroup"
+	repo2 "github.com/ubnetdef/ScoreTrak/pkg/hostgroup/hostgrouprepo"
 	"github.com/gofrs/uuid"
 )
 

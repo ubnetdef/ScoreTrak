@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/config"
+	"github.com/ubnetdef/ScoreTrak/pkg/config"
 	"github.com/spf13/viper"
 )
 

@@ -3,8 +3,8 @@ package resolver
 import (
 	"strings"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/exec"
-	"github.com/ScoreTrak/ScoreTrak/pkg/exec/services"
+	"github.com/ubnetdef/ScoreTrak/pkg/exec"
+	"github.com/ubnetdef/ScoreTrak/pkg/exec/services"
 )
 
 // ExecutableByName converts the name of the service to a specific executable type defined in pkg/exec/services

@@ -3,8 +3,8 @@ package none
 import (
 	"context"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/platform/util"
-	"github.com/ScoreTrak/ScoreTrak/pkg/platform/worker"
+	"github.com/ubnetdef/ScoreTrak/pkg/platform/util"
+	"github.com/ubnetdef/ScoreTrak/pkg/platform/worker"
 )
 
 type None struct{}

@@ -3,8 +3,8 @@ package team
 import (
 	"errors"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/host"
-	"github.com/ScoreTrak/ScoreTrak/pkg/user"
+	"github.com/ubnetdef/ScoreTrak/pkg/host"
+	"github.com/ubnetdef/ScoreTrak/pkg/user"
 	"github.com/gofrs/uuid"
 	"gorm.io/gorm"
 )

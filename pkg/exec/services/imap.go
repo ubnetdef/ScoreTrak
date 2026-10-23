@@ -7,7 +7,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/ScoreTrak/ScoreTrak/pkg/exec"
+	"github.com/ubnetdef/ScoreTrak/pkg/exec"
 	"github.com/emersion/go-imap"
 	"github.com/emersion/go-imap/client"
 )

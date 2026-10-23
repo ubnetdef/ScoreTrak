@@ -9,7 +9,7 @@ services:
     depends_on:
       - db-init
       - nsqd
-    command: ./master -config /deployments/docker-nsq/config.yml
+    command: master -config /deployments/docker-nsq/config.yml
 
   scoretrak-web:
     image: ghcr.io/scoretrak/client/scoretrak-client:v0.1.7
